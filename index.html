@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="author" content="Raul,Raquel,Eric" />
     <meta name="description" content="Calculator" />
@@ -9,52 +8,81 @@
     <link rel="stylesheet" href="styles/all.css" />
     <script src="scripts/main.js"></script>
     <title>Calculator</title>
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap");
-    </style>
-</head>
+  </head>
 
-<body>
+  <body>
+    <iframe src=""  frameborder="0"></iframe>
     <div id="calculator">
-        <table>
-            <tr class="row-display">
-                <td class="display" colspan="4">
-                    <button type="button" id="display" />
-                </td>
-            </tr>
-            <tr class="row-one">
-                <td class="clear" colspan="3">
-                    <button class="clear" type="button">C</button>
-                </td>
-                <td class="td-symbols"><button type="button">/</button></td>
-            </tr>
-            <tr class="row-two">
-                <td class="td-numbers"><button type="button">7</button></td>
-                <td class="td-numbers"><button type="button">8</button></td>
-                <td class="td-numbers"><button type="button">9</button></td>
-                <td class="td-symbols"><button type="button">*</button></td>
-            </tr>
-            <tr class="row-three">
-                <td class="td-numbers"><button type="button">4</button></td>
-                <td class="td-numbers"><button type="button">5</button></td>
-                <td class="td-numbers"><button type="button">6</button></td>
-                <td class="td-symbols"><button type="button">-</button></td>
-            </tr>
-            <tr class="row-four">
-                <td class="td-numbers"><button type="button">1</button></td>
-                <td class="td-numbers"><button type="button">2</button></td>
-                <td class="td-numbers"><button type="button">3</button></td>
-                <td class="td-symbols"><button type="button">+</button></td>
-            </tr>
-            <tr class="row-five">
-                <td class="td-zero">
-                    <button type="button" class="btn-zero">0</button>
-                </td>
-                <td class="td-numbers"><button type="button">.</button></td>
-                <td class="td-symbols"><button type="button">=</button></td>
-            </tr>
-        </table>
+      <table>
+        <tr class="row-display">
+          <td>
+            <p type="button" id="display" />
+          </td>
+        </tr>
+        <tr class="rows">
+          <td>
+            <button class="clear" type="reset" onclick="clearDisplay()">
+              C
+            </button>
+          </td>
+          <td>
+            <button type="button" class="btn-operators" class="btn-symbol" value="/" onclick="add(this.value)">/</button> <!-- The class btn-symbol Is for a js file -->
+          </td>
+        </tr>
+        <tr class="rows">
+          <td>
+            <button type="button" class="btn-numbers" value="7" onclick="add(this.value)">7</button>
+          </td>
+          <td>
+            <button type="button" class="btn-numbers" value="8" onclick="add(this.value)">8</button>
+          </td>
+          <td>
+            <button type="button" class="btn-numbers" value="9" onclick="add(this.value)">9</button>
+          </td>
+          <td>
+            <button type="button" class="btn-operators btn-symbol" value="*" onclick="add(this.value)">*</button> <!-- The class btn-symbol Is for a js file -->
+          </td>
+        </tr>
+        <tr class="rows">
+          <td>
+            <button type="button" class="btn-numbers" value="4" onclick="add(this.value)">4</button>
+          </td>
+          <td>
+            <button type="button" class="btn-numbers" value="5" onclick="add(this.value)">5</button>
+          </td>
+          <td>
+            <button type="button" class="btn-numbers" value="6" onclick="add(this.value)">6</button>
+          </td>
+          <td>
+            <button type="button" class="btn-operators" class="btn-symbol" value="-" onclick="add(this.value)">-</button> <!-- The class btn-symbol Is for a js file -->
+          </td>
+        </tr>
+        <tr class="rows">
+          <td>
+            <button type="button" class="btn-numbers" value="1" onclick="add(this.value)">1</button>
+          </td>
+          <td>
+            <button type="button" class="btn-numbers" value="2" onclick="add(this.value)">2</button>
+          </td>
+          <td>
+            <button type="button" class="btn-numbers" value="3" onclick="add(this.value)">3</button>
+          </td>
+          <td>
+            <button type="button" class="btn-operators" class="btn-symbol" value="+" onclick="add(this.value)">+</button> <!-- The class btn-symbol Is for a js file -->
+          </td>
+        </tr>
+        <tr class="rows">
+          <td >
+            <button type="button" class="zero" value="0" onclick="add(this.value)">0</button>
+          </td>
+          <td>
+            <button type="button" class="btn-numbers" class="btn-symbol" value="." onclick="add(this.value)">.</button>
+          </td>
+          <td>
+            <button type="button" class="btn-operators" onclick="equals()">=</button>
+          </td>
+        </tr>
+      </table>
     </div>
-</body>
-
+  </body>
 </html>
